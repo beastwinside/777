@@ -1,0 +1,5 @@
+nodejs+phantomjs+cheerio+express+mysql+webpack
+
+React+Redux+React Router+antdesign+animatedcss+babel+webpack
+
+React-native....  
