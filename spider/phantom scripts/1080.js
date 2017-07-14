@@ -3,9 +3,12 @@ var page = webpage.create();
 var fs = require('fs');
 
 var myDate = new Date();
-var name= myDate.toLocaleDateString();
+var year= myDate.getFullYear();
+var month= myDate.getMonth();
+var date=myDate.getDate();
 
-var loadname="../datasource/"+name+"/1080.html";
+var riqi=year+"年"+month+"月"+date+"日";
+var loadname="../datasource/"+riqi+"/1080.html";
 
 page.open('https://search.jd.com/Search?keyword=gtx1080', function (status) {
     var data;
