@@ -10,7 +10,7 @@ var date=myDate.getDate();
 var riqi=year+"年"+month+"月"+date+"日";
 
 
-var loadname="../datasource/"+riqi+"/1080.html";
+var loadname="../datasource/"+riqi+"/固态硬盘128g.html";
 var data=fs.readFileSync(loadname,"utf-8");
 
 $=cheerio.load(data);
@@ -19,5 +19,9 @@ $=cheerio.load(data);
 
 // console.log($('em','.p-name-type-2').text()); //这个来筛选型号
 
- // console.log($('strong','ul.gl-warp').text()); //这个筛选价格
+ console.log($('strong','ul.gl-warp').text()); //这个筛选价格
+
+
+
+
 

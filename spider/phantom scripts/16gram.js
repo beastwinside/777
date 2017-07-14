@@ -7,7 +7,7 @@ var name= myDate.toLocaleDateString();
 
 var loadname="../datasource/"+name+"/16g内存.html";
 
-page.open('https://search.jd.com/Search?keyword=16g内存', function (status) {
+page.open('https://search.jd.com/Search?keyword=16g%E5%86%85%E5%AD%98&enc=utf-8', function (status) {
     var data;
     if (status === 'fail') {
         console.log('open page fail!');
