@@ -5,9 +5,9 @@ var fs = require('fs');
 var myDate = new Date();
 var name= myDate.toLocaleDateString();
 
-var loadname="./datasource/"+name+"/1070.html";
+var loadname="../datasource/"+name+"/cpu i3.html";
 
-page.open('https://search.jd.com/Search?keyword=gtx1070', function (status) {
+page.open('https://search.jd.com/Search?keyword=cpu%20I3', function (status) {
     var data;
     if (status === 'fail') {
         console.log('open page fail!');

@@ -5,9 +5,9 @@ var fs = require('fs');
 var myDate = new Date();
 var name= myDate.toLocaleDateString();
 
-var loadname="./datasource/"+name+"/固态硬盘128g.html";
+var loadname="../datasource/"+name+"/cpu i5.html";
 
-page.open('https://search.jd.com/Search?keyword=固态硬盘128g', function (status) {
+page.open('https://search.jd.com/Search?keyword=cpu%20I5', function (status) {
     var data;
     if (status === 'fail') {
         console.log('open page fail!');

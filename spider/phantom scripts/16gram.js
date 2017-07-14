@@ -5,9 +5,9 @@ var fs = require('fs');
 var myDate = new Date();
 var name= myDate.toLocaleDateString();
 
-var loadname="./datasource/"+name+"/固态硬盘256g.html";
+var loadname="../datasource/"+name+"/16g内存.html";
 
-page.open('https://search.jd.com/Search?keyword=固态硬盘256g', function (status) {
+page.open('https://search.jd.com/Search?keyword=16g内存', function (status) {
     var data;
     if (status === 'fail') {
         console.log('open page fail!');
