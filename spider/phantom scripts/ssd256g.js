@@ -7,7 +7,7 @@ var name= myDate.toLocaleDateString();
 
 var loadname="../datasource/"+name+"/固态硬盘256g.html";
 
-page.open('https://search.jd.com/Search?keyword=固态硬盘256g&enc=utf-8', function (status) {
+page.open('https://search.jd.com/Search?keyword=%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98256g&enc=utf-8', function (status) {
     var data;
     if (status === 'fail') {
         console.log('open page fail!');

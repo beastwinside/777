@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "phantomjs":"node_modules/.bin/phantomjs"
-
+    "phantomjs": "node_modules/.bin/phantomjs"
   },
   "repository": {
     "type": "git",
