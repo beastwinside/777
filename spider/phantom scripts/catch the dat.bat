@@ -1,13 +1,12 @@
-
 phantomjs 1050.js 
 phantomjs 1050ti.js  
 phantomjs 1060.js
 phantomjs 1070.js
 phantomjs 1080.js
 phantomjs 1080ti.js
-phantomjs cpui3.js
+phantomjs cpu7700.js
 phantomjs cpui5.js
-phantomjs cpui7.js
+phantomjs cpu7700k.js
 phantomjs 4gram.js
 phantomjs 8gram.js
 phantomjs 16gram.js

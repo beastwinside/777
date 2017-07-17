@@ -5,9 +5,9 @@ var fs = require('fs');
 var myDate = new Date();
 var name= myDate.toLocaleDateString();
 
-var loadname="../datasource/"+name+"/cpu i7.html";
+var loadname="../datasource/"+name+"/cpu i7 7700.html";
 
-page.open('https://search.jd.com/Search?keyword=cpu%20I7', function (status) {
+page.open('https://search.jd.com/Search?keyword=i7%207700&enc=utf-8', function (status) {
     var data;
     if (status === 'fail') {
         console.log('open page fail!');
