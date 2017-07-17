@@ -34,7 +34,6 @@ function dealram(){
 	let jgarr=jg.split('评价'); //根据评价先分离一团的价格信息
 	let jgnum=new Array();    //存放分离出来后商品价格的数组
 	let pjnum=new Array();  //存放分离出来后商品评价的数组。
-
 	let allarr=new Array();
 
 	for(i=0;i<=25;i++)
