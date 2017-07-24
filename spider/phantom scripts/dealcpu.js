@@ -10,7 +10,12 @@ var date=myDate.getDate();//获取日
 var riqi=year+"年"+month+"月"+date+"日";//评价日期字符串
 
 
-var loadname="../datasource/"+riqi+"/cpu i7 7700.html";//拼接保存位置
+var searcharr=['cpu i5','cpu i7 7700','cpu i7 7700k'];
+
+
+function dealcpu(searchname){
+
+var loadname="../datasource/"+riqi+"/"+searchname+".html";//拼接保存位置
 var data=fs.readFileSync(loadname,"utf-8"); //根据文字读取爬虫数据
 
 $=cheerio.load(data); //cheerio，类似与Jquerry，装载完便与操作字符串
@@ -24,10 +29,10 @@ var xinghao=$('em','.p-name-type-2').text(); //一团型号信息
 var jiage=$('strong','ul.gl-warp').text(); //一团价格信息
 
 
-function dealram(){
-	let xh=xinghao;
-	let dianpu=dian;
-	let jg=jiage;
+
+let xh=xinghao;
+let dianpu=dian;
+let jg=jiage;
 	let xhflag=xh.match(/套装|处理器/g);  //分理出内存类型对应的位置。
 	let xhcon=xh.split(/套装|处理器/g);  //根据内存类型，分割字符串
 	let dianarr=dianpu.split("店");
@@ -37,8 +42,8 @@ function dealram(){
 	let allarr=new Array();
 
 	for(i=0;i<=25;i++)
-		{
-			jgarr[i]=jgarr[i].split("已有");
+	{
+		jgarr[i]=jgarr[i].split("已有");
 			jgnum.push(parseFloat(jgarr[i][0].split("￥")[1])); //抽离出num类型的价格数组。
 			pjnum.push(parseFloat(jgarr[i][1].split("条")[0])); //抽离出num类型的评价数组。
 			xhcon[i]=xhcon[i]+xhflag[i]; //拼接分离的型号具体描述数组
@@ -53,11 +58,22 @@ function dealram(){
 
 			});
 		}
-console.log(allarr);
 
-}
+		
+		var daa= JSON.stringify(allarr);
+		 	var loadname1="../datasource/"+riqi+"/"+searchname+".json";//拼接保存位置
+		 	fs.writeFileSync(loadname1,daa);
+		 		  fs.unlinkSync(loadname); 
 
-dealram();
+
+
+		 }
+
+		 for(ii=0;ii<searcharr.length;ii++)
+		 {
+		 	dealcpu(searcharr[ii]);
+		 }
+
 
 
 

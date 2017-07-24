@@ -12,3 +12,7 @@ phantomjs 8gram.js
 phantomjs 16gram.js
 phantomjs ssd128g.js
 phantomjs ssd256g.js
+node dealgtx.js
+node dealcpu.js
+node dealram.js
+node dealssd.js
